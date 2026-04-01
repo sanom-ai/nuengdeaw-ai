@@ -1,0 +1,26 @@
+# Node / editor
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+.env
+.env.local
+.env.production
+tenants.json
+runtime/tenants.json
+
+# Runtime state
+logs/
+billing/
+billing-test/
+billing-verify-output/
+session-store/
+
+# Test artifacts
+tenants.test.json
+
+# Coverage / temp
+coverage/
+tmp/
+temp/

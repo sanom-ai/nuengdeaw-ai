@@ -1,0 +1,22 @@
+{
+  "tenants": [
+    {
+      "id": "tenant-basic",
+      "name": "Tenant Basic",
+      "apiKey": "tenant-basic-key",
+      "plan": "basic",
+      "maxSessions": 3,
+      "rateLimitPerWindow": 120,
+      "active": true
+    },
+    {
+      "id": "tenant-pro",
+      "name": "Tenant Pro",
+      "apiKey": "tenant-pro-key",
+      "plan": "pro",
+      "maxSessions": 10,
+      "rateLimitPerWindow": 600,
+      "active": true
+    }
+  ]
+}

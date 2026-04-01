@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Sim Admin</title>
+  <link rel="stylesheet" href="/admin/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">Human Sim Admin</div>
+      <p class="muted">Pricing, usage, tenants, quote, and invoice tools.</p>
+      <label class="field">
+        <span>Admin API Key</span>
+        <input id="apiKey" type="password" placeholder="Bearer token">
+      </label>
+      <label class="field">
+        <span>API Base URL</span>
+        <input id="baseUrl" type="text" value="">
+      </label>
+      <button id="connectBtn" class="primary">Connect</button>
+      <p id="status" class="status">Disconnected</p>
+    </aside>
+
+    <main class="content">
+      <section class="panel">
+        <div class="panel-head">
+          <h1>Operations Dashboard</h1>
+          <button id="refreshBtn">Refresh</button>
+        </div>
+        <div class="stats" id="stats"></div>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <h2>Pricing</h2>
+          <pre id="pricingView" class="code"></pre>
+        </div>
+        <div class="panel">
+          <h2>Usage</h2>
+          <pre id="usageView" class="code"></pre>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <h2>Generate Quote</h2>
+          <label class="field"><span>Tenant ID</span><input id="quoteTenantId" type="text" placeholder="tenant-smoke"></label>
+          <label class="field"><span>Plan ID</span><input id="quotePlanId" type="text" placeholder="pro"></label>
+          <button id="quoteBtn" class="primary">Generate Quote</button>
+          <pre id="quoteView" class="code"></pre>
+        </div>
+        <div class="panel">
+          <h2>Generate Invoice</h2>
+          <label class="field"><span>Tenant ID</span><input id="invoiceTenantId" type="text" placeholder="tenant-smoke"></label>
+          <label class="field"><span>Customer Name</span><input id="invoiceCustomerName" type="text" placeholder="Tenant Smoke Co., Ltd."></label>
+          <label class="field"><span>Plan ID</span><input id="invoicePlanId" type="text" placeholder="pro"></label>
+          <label class="field"><span>Billing Period</span><input id="invoicePeriod" type="text" placeholder="2026-03"></label>
+          <button id="invoiceBtn" class="primary">Generate Invoice HTML</button>
+          <pre id="invoiceView" class="code"></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/admin/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "currency": "THB",
+  "vat_included": true,
+  "monthly_plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "price_thb_monthly": 0,
+      "free_trial_days": 0,
+      "max_active_sessions": 1,
+      "rate_limit_requests_per_minute": 100,
+      "billable_units_included": 2000,
+      "features": [
+        "Session basic",
+        "Tick",
+        "Event",
+        "Phasa Tawan parse/evaluate",
+        "Health check"
+      ],
+      "ideal_for": [
+        "ทดลองระบบ",
+        "นักศึกษา",
+        "Researcher เดี่ยว"
+      ]
+    },
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price_thb_monthly": 1490,
+      "free_trial_days": 14,
+      "max_active_sessions": 3,
+      "rate_limit_requests_per_minute": 300,
+      "billable_units_included": 10000,
+      "features": [
+        "Memory",
+        "Config",
+        "Action",
+        "Basic Deception level 1-2"
+      ],
+      "ideal_for": [
+        "นักวิจัยอิสระ",
+        "SME",
+        "EdTech เล็ก"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price_thb_monthly": 3990,
+      "free_trial_days": 14,
+      "max_active_sessions": 10,
+      "rate_limit_requests_per_minute": 800,
+      "billable_units_included": 50000,
+      "features": [
+        "Full Deception Engine",
+        "Language Context",
+        "Admin usage log",
+        "Export CSV"
+      ],
+      "ideal_for": [
+        "บริษัทเทสต์ UX/UI",
+        "Clinic จิตวิทยา",
+        "Startup"
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "price_thb_monthly": 9900,
+      "free_trial_days": 7,
+      "max_active_sessions": 30,
+      "rate_limit_requests_per_minute": 2000,
+      "billable_units_included": 200000,
+      "features": [
+        "Priority support",
+        "Advanced Phasa Tawan apply",
+        "Full Admin API"
+      ],
+      "ideal_for": [
+        "องค์กรกลาง",
+        "ศูนย์วิจัย",
+        "มหาวิทยาลัย"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "price_thb_monthly": null,
+      "free_trial_days": 30,
+      "max_active_sessions": null,
+      "rate_limit_requests_per_minute": null,
+      "billable_units_included": null,
+      "features": [
+        "Dedicated instance",
+        "On-premise",
+        "SLA 99.5%",
+        "Custom feature",
+        "White-label"
+      ],
+      "ideal_for": [
+        "โรงพยาบาล",
+        "องค์กรใหญ่",
+        "Research Institute"
+      ]
+    }
+  ],
+  "overage": {
+    "price_thb_per_1000_units": 1.2
+  },
+  "billable_units_formula": {
+    "sessions_created_weight": 5,
+    "ticks_requested_weight": 0.1,
+    "language_scripts_applied_weight": 2,
+    "events_actions_deception_weight": 0.5
+  },
+  "payg": {
+    "session_hour_thb": 18,
+    "session_day_thb": 149,
+    "extra_units_thb_per_1000": 1.5
+  },
+  "notes": [
+    "Free plan should use a short TTL and limited deception capabilities.",
+    "Prices include 7% VAT by default and can be localized.",
+    "This file is designed for dashboards, pricing pages, or billing rule generation."
+  ]
+}

@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+logs
+billing
+session-store
+billing-test
+tenants.test.json
+*.log

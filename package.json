@@ -1,0 +1,16 @@
+{
+  "name": "human-sim-rental-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready HTTP wrapper for the Nuengdeaw Human Simulator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "smoke": "node smoke-test.js",
+    "check": "node production-check.js",
+    "billing:verify": "node billing-verify.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

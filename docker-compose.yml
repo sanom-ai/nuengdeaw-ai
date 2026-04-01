@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      HOST: 0.0.0.0
+      ADMIN_API_KEY: ${ADMIN_API_KEY:-change-this-admin-key}
+      TENANTS_FILE: /app/runtime/tenants.json
+      REDIS_URL: redis://redis:6379/0
+      PHASA_TAWAN_DEFAULT_STRICT_MODE: ${PHASA_TAWAN_DEFAULT_STRICT_MODE:-strict}
+      AUTO_SAVE_SESSIONS: ${AUTO_SAVE_SESSIONS:-true}
+      STRICT_BOOTSTRAP_VALIDATION: ${STRICT_BOOTSTRAP_VALIDATION:-true}
+      DEFAULT_RATE_LIMIT_PER_WINDOW: ${DEFAULT_RATE_LIMIT_PER_WINDOW:-300}
+      RATE_LIMIT_WINDOW_MS: ${RATE_LIMIT_WINDOW_MS:-60000}
+      LOG_DIR: /app/runtime/logs
+      BILLING_DIR: /app/runtime/billing
+      SESSION_STORE_DIR: /app/runtime/session-store
+    volumes:
+      - ./tenants.example.json:/app/runtime/tenants.json
+      - app_runtime:/app/runtime
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+
+volumes:
+  app_runtime:
+  redis_data:
