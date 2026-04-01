@@ -4,6 +4,8 @@ Open-source human simulation and Phasa Tawan API service by Sanom AI.
 
 This repository contains the Community Edition of the Nuengdeaw AI stack: a Node.js API around the `nuengdeaw_simulator.js` runtime, with session management, multi-tenant auth, Phasa Tawan parsing, billing helpers, admin dashboard, Docker deploy, and Redis-ready persistence.
 
+Nuengdeaw AI started as a Human State Intelligence API project and is now positioned as an open Community Edition plus optional hosted and enterprise services.
+
 ## License
 
 This project is released under [AGPL-3.0](./LICENSE).
@@ -180,7 +182,7 @@ Sanom AI can separately offer:
 - white-label UI
 - custom integrations
 
-The hosted landing page is served from [hosted.html](/D:/TAWAN/P-/hosted.html#L1) and will be exposed at `/hosted`.
+The hosted landing page is served from [hosted.html](/D:/TAWAN/P-/hosted.html#L1) and exposed at `/hosted`.
 
 ## Before You Publish
 
@@ -192,7 +194,7 @@ Do not push:
 - `billing/`
 - `session-store/`
 
-The repository now includes [\.gitignore](/D:/TAWAN/P-/.gitignore#L1) for that.
+The repository includes [\.gitignore](/D:/TAWAN/P-/.gitignore#L1) for that.
 
 ## Validation
 
